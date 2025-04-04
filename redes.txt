@@ -1,0 +1,146 @@
+#hostname
+crear nombre
+
+#consola
+configure terminal
+line console 0
+password cisco
+login
+end
+
+#enable
+configure terminal
+enable secret class #para preguntar clave
+exit
+
+#configurar contrase;a vty
+configure terminal
+line vty 0 15
+password cisco
+login
+end
+
+#encriptar password
+configure terminal
+service password-encryption
+exit
+
+show running-config
+
+#banner
+configure terminal
+banner motd #Aurhorized acces #
+
+#JAMAS PONER LA PALABRA BIENVENIDO EN NINGUN IDIOMA#
+
+#running-config
+#guardar las configuraciones
+comando para copiar lo que hice
+copy running-config startup-config
+
+#modificacion de la configuracion en ejecucion
+reload #recargar
+erase #borrar el contenido
+
+#captura archivo de texto
+show running-config
+
+#2.6 puerto y direcciones
+
+#direccion ip
+8 bits
+
+#2.7 configuracion de ip
+
+los switch no rootean
+
+protocolo DHCP
+
+configure terminal
+interface vlan 1
+ip address direccionip mascaradered
+no shutdown
+
+#2.8 verificar la conectividad
+comando
+ping ip
+
+
+pc1 192.168.1.10 255.255.255.0
+pc2 192.168.1.11 255.255.255.0
+lan 192.168.1.254 255.255.255.0
+
+
+
+Modulo 3: protocolo y modelos
+
+explicar la funcion d los protocolos y de las 
+organizaciones de estandarizacion para facilitar 
+la interoperabilidad de las comunicaciones de red
+
+3.1 reglas
+
+aspectos basicos de la comunicacion
+
+habra una fuente(remitente)
+habra un destino(receptor)
+haba un canal(medios) que proporciona la ruta de las comunicaciones
+
+definir las reglas
+todas las comunicaciones se rigen por protocolos
+los protocolos son las reglas que seguiran las comunicaciones
+estas reglas varian en funcion al protocolo
+
+un emisor y un receptor identificados
+idioma y gramatica comun
+velocidad y momento de entrega
+requisitos de confirmacion o acuse de recibo
+
+codificacion de los mensajes
+formato y encapsulamiento del mensaje
+tamaño del mensaje
+sincronizacion del mensaje
+opciones de entrega del mensaje
+
+opciones de entrega de mensaje
+
+unidifusion: comunicacion uno a uno
+multidifusion: uno a muchos
+difucion: uno para todos
+
+3.3 suite
+
+protocolo por defecto es el TCP/IP y la mantiene IETF
+
+TCP/IP tiene 4 capas
+aplicacion, transporte, internet,network access
+
+3.4 organizaciones estandares
+
+beneficios del uso de un modelo de capas
+
+APRENDER 
+OSI MODEL Y TCP/IP
+
+beneficios del uso de modelo en capas
+
+MTV
+
+no todos los protocolos ordenada
+
+los que ordenan demoran mas, y los que no demoran menos 
+
+unidad de datos del protocolo
+1-datos
+2-segmento
+3-paquete
+4-trama
+5-bits(secuencia de bits)
+
+las PDU que pasan
+
+Data
+segmento
+packet
+frame
+bits
